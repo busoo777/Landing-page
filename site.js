@@ -62,15 +62,17 @@
     }).then(function (res) {
       if (res.ok) {
         form.reset();
-        msg.textContent = 'Richiesta inviata. Ti rispondo personalmente entro 24-48 ore.';
+        msg.textContent = '✓ Richiesta inviata! Ti rispondo personalmente entro 24-48 ore.';
         msg.className = 'form-msg ok';
       } else {
         msg.textContent = 'Qualcosa è andato storto. Riprova, o scrivimi direttamente via email.';
         msg.className = 'form-msg err';
       }
+      msg.scrollIntoView({ block: 'center', behavior: 'smooth' });
     }).catch(function () {
       msg.textContent = 'Connessione non riuscita. Riprova, o scrivimi direttamente via email.';
       msg.className = 'form-msg err';
+      msg.scrollIntoView({ block: 'center', behavior: 'smooth' });
     }).finally(function () {
       btn.disabled = false;
       btn.textContent = 'Invia la richiesta';
