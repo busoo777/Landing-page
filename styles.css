@@ -1118,3 +1118,47 @@ body {
   .prova2-grid { grid-template-columns: 1fr; }
   .board { max-width: 440px; margin: 0 auto; }
 }
+
+/* ═══ Fascia loghi collaborazioni ═══ */
+.loghi { text-align: center; }
+.loghi-title {
+  font-family: 'Space Mono', monospace;
+  font-size: 12px;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 26px;
+}
+.loghi-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(24px, 5vw, 56px);
+}
+.logo-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 64px;
+}
+.logo-item img {
+  max-height: 100%;
+  max-width: 170px;
+  width: auto;
+  object-fit: contain;
+  filter: grayscale(1);
+  opacity: .72;
+  transition: filter .2s ease, opacity .2s ease;
+}
+.logo-item img:hover { filter: grayscale(0); opacity: 1; }
+/* segnaposto testuale finché non carichi i file logo */
+.logo-ph {
+  font-family: 'Fraunces', serif;
+  font-weight: 600;
+  font-size: 1.15rem;
+  color: var(--muted);
+  border: 1px dashed var(--border);
+  border-radius: 10px;
+  padding: 14px 22px;
+}
