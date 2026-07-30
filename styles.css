@@ -1137,6 +1137,7 @@ body {
   gap: clamp(24px, 5vw, 56px);
 }
 .logo-item {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1147,11 +1148,27 @@ body {
   max-width: 170px;
   width: auto;
   object-fit: contain;
-  filter: grayscale(1);
-  opacity: .72;
-  transition: filter .2s ease, opacity .2s ease;
 }
-.logo-item img:hover { filter: grayscale(0); opacity: 1; }
+.logo-item .logo-color {
+  position: absolute;
+  top: 0; left: 50%;
+  translate: -50% 0;
+  height: 100%;
+  opacity: 0;
+  transition: opacity .25s ease;
+  pointer-events: none;
+}
+.logo-item .logo-grey {
+  opacity: .7;
+  transition: opacity .25s ease;
+}
+.logo-item:hover .logo-color { opacity: 1; }
+.logo-item:hover .logo-grey { opacity: 0; }
+/* su touch (niente hover): mostra direttamente i colori */
+@media (hover: none) {
+  .logo-item .logo-color { opacity: 1; }
+  .logo-item .logo-grey { opacity: 0; }
+}
 /* segnaposto testuale finché non carichi i file logo */
 .logo-ph {
   font-family: 'Fraunces', serif;
