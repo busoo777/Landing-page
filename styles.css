@@ -487,9 +487,10 @@ strong { color: var(--ink); font-weight: 600; }
 }
 .page-body { padding: 20px 0 84px; }
 .page-body h2 { margin: 44px 0 16px; font-size: clamp(1.4rem, 3.4vw, 1.9rem); }
-.page-body p { margin-bottom: 16px; max-width: 700px; }
-.page-body ul { margin: 0 0 16px 22px; color: var(--muted); max-width: 680px; }
+.page-body p { margin-bottom: 16px; max-width: 700px; color: #37414F; }
+.page-body ul { margin: 0 0 16px 22px; color: #37414F; max-width: 680px; }
 .page-body li { margin-bottom: 8px; }
+.page-body .lead { color: #4A5462; }
 
 /* Caso studio (pagina) */
 .fase { margin-bottom: 34px; }
@@ -1124,9 +1125,10 @@ body {
 .loghi-title {
   font-family: 'Space Mono', monospace;
   font-size: 12px;
+  font-weight: 700;
   letter-spacing: .1em;
   text-transform: uppercase;
-  color: var(--muted);
+  color: var(--blue);
   margin-bottom: 26px;
 }
 .loghi-row {
