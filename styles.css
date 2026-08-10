@@ -1263,3 +1263,26 @@ body {
   color: var(--muted-on-ink);
   line-height: 1.5;
 }
+
+/* ═══ Lista puntata dentro la card servizio principale ═══ */
+.servizio ul {
+  list-style: none;
+  margin: 12px 0 16px;
+}
+.servizio li {
+  position: relative;
+  padding-left: 24px;
+  margin-bottom: 8px;
+  font-size: 15px;
+  color: #37414F;
+}
+.servizio li::before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--blue);
+  font-weight: 700;
+}
+.servizio.main p { margin-bottom: 12px; }
+.servizio.main p:last-child { margin-bottom: 0; }
